@@ -135,6 +135,7 @@
         </div>
         
         
+        @isset($salario['no_usuario'])
             <div class="card top30">
             <div class="card-header">
             {{ $salario['no_usuario'] }}
@@ -147,7 +148,7 @@
             </blockquote>
             </div>
             </div>
-        
+        @endisset
         
         <div class="row top30">
 
