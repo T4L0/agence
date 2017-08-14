@@ -1,0 +1,23 @@
+.nav-pills .nav-link.active, .show>.nav-pills .nav-link {
+    color: #343a40;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #343a40;
+}
+.bottom10 {
+    margin-bottom: 10px;
+}
+.bottom20 {
+    margin-bottom: 20px;
+}
+.bottom30 {
+    margin-bottom: 30px;
+}
+.top30 {
+    margin-top: 30px;
+}
+th, td {
+    width: 12.5%;
+}
