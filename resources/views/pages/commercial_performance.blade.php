@@ -36,7 +36,7 @@
                         <select id="slcPeriodos" name="periodo" class="form-control" >
                            @forelse ($periodos as $p)
                                 @if ( $p->periodo == $periodo)
-                                    <option selected value="{{ $u->co_usuario }}">{{ $p->periodo }}</option>
+                                    <option selected value="{{ $p->periodo }}">{{ $p->periodo }}</option>
                                     
                                 @else 
                                     <option value="{{ $p->periodo }}">{{ $p->periodo }}</option>

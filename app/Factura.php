@@ -9,20 +9,9 @@ class Factura extends Model
 {
     protected $table = 'cao_fatura';
     public $timestamps = false;
-    
-    /*  
-        SELECT 
-         cao_fatura.num_nf, cao_fatura.total, cao_fatura.valor, cao_fatura.data_emissao, cao_fatura.comissao_cn, cao_fatura.total_imp_inc
-         , cao_cliente.no_fantasia
-         , cao_sistema.no_sistema
-         , cao_os.co_usuario
-        FROM cao_fatura
-        LEFT JOIN cao_cliente ON ( cao_fatura.co_cliente = cao_cliente.co_cliente )
-        LEFT JOIN cao_sistema ON ( cao_fatura.co_sistema = cao_sistema.co_sistema )
-        LEFT JOIN cao_os      ON ( cao_fatura.co_os = cao_os.co_os  )
-        where cao_os.co_usuario LIKE 'carlos.arruda'
-    */
+
     static function getTablaFacturas($usuario = null, $periodo = null) {
+        // die($periodo);
         if(!$usuario || !$periodo) {
             return array();
         }

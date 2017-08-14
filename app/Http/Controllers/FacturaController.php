@@ -36,6 +36,9 @@ class FacturaController extends Controller
            $periodo = $request['periodo'];
         }
         
+        
+        
+        
         if (is_null($consultor)) {
             $consultor = $usuarios[0]->co_usuario;
             $consultor = 'anapaula.chiodaro';
@@ -50,12 +53,6 @@ class FacturaController extends Controller
         $chart_bar  = Report::getBarChart($consultor, $periodo);   
         $salario    = Salario::getSalario($consultor);
         
-        // foreach($chart_bar as $cb) {
-            // return gettype($cb['total']);
-           
-        // }
-        
-
  
         return view('pages.commercial_performance')
            -> with('consultor', $consultor)
